@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-blue: #00d4ff;
+  --neon-blue-dim: #0099cc;
+  --neon-glow: 0 0 10px rgba(0, 212, 255, 0.3), 0 0 20px rgba(0, 212, 255, 0.15);
+  --neon-glow-strong: 0 0 10px rgba(0, 212, 255, 0.5), 0 0 30px rgba(0, 212, 255, 0.25), 0 0 60px rgba(0, 212, 255, 0.1);
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #111118;
+  --bg-tertiary: #16161f;
+  --bg-card: #1a1a25;
+  --border-color: #2a2a3a;
+  --border-glow: #1a3a5c;
+  --text-primary: #e8e8ef;
+  --text-secondary: #8888a0;
+  --text-muted: #555570;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-blue-dim);
+}
+
+/* Neon glow utilities */
+.neon-border {
+  border-color: var(--border-glow);
+  box-shadow: var(--neon-glow);
+}
+
+.neon-text {
+  color: var(--neon-blue);
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
+}
+
+.neon-dot {
+  background: var(--neon-blue);
+  box-shadow: 0 0 6px var(--neon-blue), 0 0 12px rgba(0, 212, 255, 0.3);
+}
+
+/* Selection */
+::selection {
+  background: rgba(0, 212, 255, 0.25);
+  color: #fff;
+}
